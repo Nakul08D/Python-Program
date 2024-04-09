@@ -1,0 +1,15 @@
+# Anagram
+
+def anagram(a):
+    d={}
+    for i in range(len(a)):
+        w=''.join(sorted(a[i]))
+        if w not in d:
+            d[w]=[i+1]
+        else:
+            d[w].append(i+1)
+    return d
+
+
+a=["cat","dog","god","tca","act"]
+print(anagram(a))

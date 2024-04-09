@@ -1,0 +1,17 @@
+l=[12,2,3,45,78,4,2,5,6,4]
+f=l[0]
+for i in range(len(l)):
+    if(l[i]>f):
+        f=l[i]
+
+s=l[0]
+for i in range(len(l)):
+    if(l[i]>s and l[i]<f):
+        s=l[i]
+
+t=l[0]
+for i in range(len(l)):
+    if(l[i]>t and l[i]<s and l[i]<f):
+        t=l[i]
+
+print("The third largest element is: ",t)

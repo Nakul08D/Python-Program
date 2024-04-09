@@ -1,0 +1,28 @@
+class employe:
+    salary = 500
+    bonus  = 100
+
+    '''def __init__(self,s,b):
+        self.salary=s
+        self.bonus=b'''
+
+    '''@classmethod
+    def __init__(cls,sa,bo):
+        cls.salary=sa
+        cls.bonus=bo'''
+    
+    @property
+    def increment(self):
+        return self.salary+self.bonus
+    
+    @increment.setter
+    def increment(self,t):
+        #self.t=t
+        self.bonus=t-self.salary
+        return self.bonus
+         
+
+e=employe()
+print(e.increment)
+e.increment=1000
+print(e.bonus)

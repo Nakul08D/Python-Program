@@ -1,0 +1,16 @@
+def gen():
+    n1=0
+    n2=1
+    n3=n1+n2
+    yield n1
+    yield n2
+    for i in range(n):
+        yield n3
+        n1=n2
+        n2=n3
+        n3=n1+n2
+
+n=int(input("Enter the number till you want to print: "))
+a=gen()
+for value in a:
+    print(value,end=',')

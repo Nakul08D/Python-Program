@@ -1,0 +1,47 @@
+class library:
+    def __init__(self,listofbook):
+        self.book=listofbook
+
+    def displaybook(self):
+        for book in self.book:
+            print("*",book)
+
+    def borrowbook(self,book):
+        print(f"Your Book {book} is issued.Please return on time")
+        self.book.remove(book)
+
+    def returnbook(self,bookname):
+        print("Thanks for returning book.")
+        self.book.append(bookname)
+
+class student:
+    def borrowbook(self):
+        b=input("Enter the name of book you want: ")
+        return b
+    
+    def returnbook(self):
+        self.book=input("Enter The name of book you return: ")
+        return self.book
+        
+
+l=library(["Pirates","Kingmaker","Soul","Raw"])
+s=student()
+while(True):
+   
+    print('''Enter The Option you want: 
+1.Display The Book
+2.Boorow Book
+3.Return Book
+4.Exit''')
+    n=int(input())
+    if n==1:
+        l.displaybook()
+    elif n==2:
+        l.borrowbook(s.borrowbook())
+    elif n==3:
+        l.returnbook(s.returnbook())
+    elif n==4:
+        print("Thanks for choosing library")
+        exit()
+    else:
+        print("Invalid Number!")

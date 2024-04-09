@@ -1,0 +1,37 @@
+import random
+
+def game(y,c):
+    if y=='s'and c=='w':
+        return 1
+    elif y=='w'and c=='s':
+        return -1
+    elif y=='g'and c=='s':
+        return 1
+    elif y=='s'and c=='g':
+        return -1
+    elif y=='w'and c=='g':
+        return 1
+    elif y=='g'and c=='w':
+        return -1
+    else:
+        return 0
+    
+#import random
+num=random.randint(1,3)
+
+if num==1:
+    comp = 's'
+elif num==2:
+    comp = 'w'
+else:
+    comp = 'g'
+
+you=input("Enter Snake(s),Water(w),Gun(g):")
+
+r=game(you,comp)
+if r==1:
+    print(f"You win you choose {you} and computer losse he choose {comp}")
+elif r==-1:
+    print(f"You loose you choose {you} and computer win he choose {comp}")
+else:
+    print(f"Draw! you choose {you} and computer also choose {comp}")

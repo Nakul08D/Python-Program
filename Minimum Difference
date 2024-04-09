@@ -1,0 +1,14 @@
+# Minimim difference in Binary Tree:
+
+def diff(l):
+    l.sort()
+    diff=l[-1]
+    for i in range(len(l)-1):
+        a=l[i+1]-l[i]
+        if (a<diff):
+            diff=a
+    return diff
+
+
+l=[5,32,45,4,12,18,25]
+print("The minimum Difference is:",diff(l))

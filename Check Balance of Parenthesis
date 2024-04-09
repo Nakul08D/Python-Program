@@ -1,0 +1,36 @@
+# l="{()[][]()}"
+
+# for i in l:
+#    l= l.replace('()','')
+#    l= l.replace('{}','')
+#    l= l.replace('[]','')
+
+# if(len(l)==0):
+#     print('True')
+# else:
+#     print("False")
+
+# 2nd way using Stack:
+
+def check(a):
+    s=[]
+    open_list=['{', '[', '(']
+    close_list=['}',']',')']
+    for i in a:
+        if i in open_list:
+            s.append(i)
+        elif i in close_list:
+            pos = close_list.index(i)
+            print("-------",pos)
+            if len(s)>0 and open_list[pos] == s[(len(s)-1)]:
+                s.pop()
+            else:
+                 return 'Unbalanced'
+    if len(s)==0:
+        return 'Balanced'
+    else:
+        return 'Unbalanced'
+
+
+string = "{[]{()}}"
+print(string,"-", check(string))

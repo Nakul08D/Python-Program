@@ -1,0 +1,35 @@
+# Rain Water Trapped:
+
+def rain(a):
+    water=0
+    l=len(a)
+    left=l*[0]
+    right=l*[0]
+
+    maxl=a[0]
+    for i in range(l):
+        if(maxl<a[i]):
+            maxl=a[i]
+            left[i]=maxl
+        else:
+            left[i]=maxl
+
+    maxr=a[-1]
+    for i in range(l-1,-1,-1):
+        if(maxr<a[i]):
+            maxr=a[i]
+            right[i]=maxr
+        else:
+            right[i]=maxr
+    
+    print(left)
+    print(right)
+
+    for i in range(l):
+        water=water+min(left[i],right[i])-a[i]
+    return water
+
+
+a=[1,0,2,0,1,0,3,1,0,2]
+print(f"Total {rain(a)}  block will filled")
+            

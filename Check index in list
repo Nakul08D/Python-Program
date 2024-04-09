@@ -1,0 +1,16 @@
+l1=[]
+for x in range(5):
+    print("Enter the number for list:")
+    item=int(input())
+    l1.append(item)
+print("l1=",l1)
+
+r=int(input("Select the number from list to check index:"))
+count=0
+for i in range(len(l1)):
+    if(l1[i]==r):
+        print("Index number is =",i)
+        count+=1
+        break
+if(count==0):
+    print("Not Found")

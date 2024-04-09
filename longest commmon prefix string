@@ -1,0 +1,20 @@
+# Longest common prefix string from list: 
+
+def common(a):
+    print("Before Soreting:",a)
+    a.sort()
+    print("After Soreting:",a)
+    size=len(a)
+    prefix=''
+    shortest=a[0]
+
+    for i in range(len(shortest)):
+        if (a[size-1][i] == shortest[i]):
+            prefix+=a[size-1][i] 
+
+    return  prefix
+
+
+a=['flute', 'flower', 'flow']
+r=common(a)
+print("Longest common prefix is:", r)

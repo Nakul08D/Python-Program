@@ -1,0 +1,14 @@
+n=int(input('Enter number of element in list: '))
+l=[]
+for i in range(n):
+    v=int(input(f'Element {i+1}: '))
+    l.append(v)
+
+print(l)
+l.sort()
+print(l)
+
+for x in range(len(l)//2):
+    print(l[x],end=',')
+for j in range(len(l)-1,len(l)//2-1,-1):
+    print(l[j],end=',')

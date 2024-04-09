@@ -1,0 +1,38 @@
+Missing Number in list for Multiple Value:
+
+l=[1,3,1,4,5,6,7]
+l2=[]
+s=set(l)
+l3=list(s)
+print("After converting to set:",s)
+
+for i in  range(1,l[-1]):
+    if i not in l:
+        l2.append(i)
+
+print("Missing number in list:",l2)
+
+
+# Missing number in List  for single value:
+
+def mis_number(a):
+    n=a[-1]
+    r=n*(n+1)//2   # r=sum of natural number --> n*(n+1)//2
+    a_sum=sum(a)
+    result = r-a_sum
+    return result
+
+a=[1,2,3,4,6,7]
+result=mis_number(a)
+print(result)
+
+# 2nd Way:
+
+# l=[1,2,3,5,7,8]
+# i=1
+# while(i<len(l)):
+#     if l[i-1]!=i:
+#         print(i)
+#         break
+#     i+=1    
+

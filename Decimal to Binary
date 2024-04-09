@@ -1,0 +1,15 @@
+# Decimal To Binary 
+
+n= int(input('Enter number : '))
+i=1
+s=0
+while(n>0):
+    r=n%2
+    s=s+r*i
+    i=i*10
+    n=n//2
+print(s)
+
+
+
+

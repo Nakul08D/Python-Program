@@ -1,0 +1,12 @@
+# Amazing Substring
+# Amazing Substring should start from vowels-->abrab-->1st a is vowels a,ab,abr,abra,abrab then 2nd vowels at index 3 then a,ab.Total Substring are 7.
+
+a='abrab'
+c=0
+v="aeiouAEIOU"
+for index,char in enumerate(a):
+    if(char in v):
+        c+=len(a)-index
+        for j in range(index+1,len(a)+1): #-->For printing sub strings.
+            print(a[index:j],end=',')
+print('Total SubString are:',c)

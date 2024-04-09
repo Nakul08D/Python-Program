@@ -1,0 +1,97 @@
+for x in range(1,6):
+    for i in range(1,x+1):
+        print("*",end="")
+    print("\n")
+
+print("---------------------------------------------")
+
+for x in range(1,6):
+    for k in range(5,x,-1):
+        print("",end=" ")
+    for i in range(1,x+1):
+        print("*",end="")
+
+    print("\n")
+
+print("---------------------------------------------")
+
+for x in range(1,6):
+    for k in range(5,x,-1):
+        print("",end=" ")
+    for i in range(1,x+1):
+        print("*",end=" ")
+
+    print("\n")
+
+print("-----------------------------------------------")
+
+for x in range(1,6):
+    for k in range(5,x,-1):
+        print("",end=" ")
+    for i in range(1,x+1):
+        print("*",end=" ")
+
+    print("\n")
+for x in range(1,6):
+    for k in range(1,x):
+        print("",end=" ")
+    for i in range(6,x,-1):
+        print("*",end=" ")
+
+    print("\n")
+
+print("--------------------------------------------")
+
+
+for i in range(6):
+  for j in range(6):
+    if  j==0 or i==5 or j==i:
+        print("*",end=' ')
+    else:
+       print(" ",end=' ')
+  print()
+
+
+print("--------------------------------------------")
+
+for i in range(6):
+  for j in range(6):
+    if  j==5 or i==5 or j==5-i:
+        print("*",end=' ')
+    else:
+       print(" ",end=' ')
+  print()
+
+print("------------------------------------------------------")
+
+for i in range(6):
+    for j in range(6-i):
+        print(" ",end='')
+    for k in range(2*i+1):
+        if k==0 or k==2*i or i==5:
+            print("*",end='')
+        else:
+            print(" ",end='')
+    print()
+
+
+# row = 8
+
+# for i in range(row):
+#     for j in range(row - i):
+#         # prints left space in the same row
+#         print(' ', end='')
+#     for j in range(2 * i + 1):
+#         # printing the left boundary of triangle
+#         if j == 0:
+#             print('*', end='')
+#             # printing the right boundary of triangle
+#         elif j == 2 * i:
+#             print('*', end='')
+#             # printing the bottom boundary of triangle
+#         elif i == row - 1:
+#             print('*', end='')
+#         # printing spaces in the middle of the triangle
+#         else:
+#             print(' ', end='')
+#     print()  # printing new line

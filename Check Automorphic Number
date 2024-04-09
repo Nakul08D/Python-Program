@@ -1,0 +1,19 @@
+# Automorphic number 5=5*5 ->25 ,6=6*6->36 last square digit is same as square number
+
+num=int(input("Enter number: "))
+num1=num
+n=10
+s=num*num
+f=0
+while(num1>0):
+    r=s%n
+    if(r==num):
+        f=1
+        break
+    num1=num1//10
+    n=n*10
+
+if f==1:
+    print(f'Yes number {num} is Automorphic number')
+else:
+    print('Not Automorphic number')

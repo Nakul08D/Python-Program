@@ -1,0 +1,22 @@
+# Find Out Pairs with given Sum:
+
+def pairs(l,sum):
+    l.sort()
+    left=0
+    right=len(l)-1
+
+    while(left<=right):
+        if l[left]+l[right]>sum:
+            right=right-1
+        elif l[left]+l[right]<sum:
+            left=left+1
+        else:
+            l[left]+l[right]==sum
+            print(f"The numbers are {l[left]} and {l[right]}")
+            right=right-1
+            left=left+1
+            
+l=[5,7,4,3,9,8,19,21]
+sum=17
+pairs(l,sum)
+

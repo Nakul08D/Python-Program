@@ -1,0 +1,46 @@
+class train:
+    def __init__(self,d):
+        self.d=d
+    
+    def display(self):
+        for item in self.d:
+            print(f"-> {item}")
+    
+    def bookticket(self,n):
+        print(f"Your ticket {n} is booked")
+        self.d.remove(n)
+
+    def cancelticket(self,w):
+        print(f"Your ticket {n} is cancelled")
+        self.d.append(w)
+
+class person:
+    def bookticket(self):
+        n=int(input("Enter ticket number you want: "))
+        return n
+    
+    def cancelticket(self):
+        t=int(input("Enter ticket number to cancell: "))
+        return t
+
+
+t=train([2,5,6,7])
+p=person()
+while(True):
+    print('''Choose option:
+1.Display Ticket
+2.Book Ticket
+3.Cancell Ticket
+4.Exit''')
+    n=int(input("Enter a number: "))
+    if n==1:
+        t.display()
+    elif n==2:
+        t.bookticket(p.bookticket())
+    elif n==3:
+        t.cancelticket(p.cancelticket())
+    elif n==4:
+        print("Thanks for visiting")
+        exit()
+    else:
+        print("Invalid option!")

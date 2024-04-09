@@ -1,0 +1,22 @@
+# Maximum Sum SubArray:
+
+def subarray(a):
+    sum=0
+    max=a[0]
+    start=0
+    end=0
+    poi=0
+    for i in range(len(a)):
+        sum=sum+a[i]
+        if(max<sum):
+            max=sum 
+            start=poi 
+            end=i
+        if(sum<0):
+            sum=0
+            poi=i+1
+    print("The max sum is:",max)
+    print(f"The index start from {start} to {end}")
+
+a=[4,-3,-2,2,3,1,-2,-3,6,-6,-4,2,1]
+subarray(a)

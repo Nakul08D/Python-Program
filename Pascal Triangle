@@ -1,0 +1,12 @@
+n=6
+temp=1
+for i in range(n):
+    for j in range(i,n):
+        print(" ",end='')
+    for k in range(i+1):
+        if(i==0 or k==0):
+            temp=1
+        else:
+            temp=temp*(i-k+1)//k
+        print(temp,end=' ')
+    print()

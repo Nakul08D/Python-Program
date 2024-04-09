@@ -1,0 +1,13 @@
+def check(s):
+    a='abcdefghijklmnopqrstuvwxyz'
+    for i in a:
+        if i not in s.lower():
+            return False
+    
+    return True
+
+a='the quick brown  fox jumps over the lazy dog'
+if(check(a)==True):
+    print("Yes")
+else:
+    print("No")

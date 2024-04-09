@@ -1,0 +1,53 @@
+class atm:
+    def __init__(self,amount):
+        self.am=amount
+
+    def displayinfo(self):
+        print(f"Your current Balance is:{self.am}")
+
+    def withdraw(self,a):
+        print("Please Take your amount",a)
+        self.am=self.am-a
+    def deposite(self,d):
+        print("Your amount is deposite",d)
+        self.am=self.am+d
+
+class user:
+    def withdraw(self):
+        a=int(input("Enter the amount to withdra:"))
+        return a
+    
+    def deposite(self):
+        d=int(input("Enter the amount to deposit:"))
+        return d
+    
+a=atm(10000)
+b=user()
+
+username="Nakul"
+password=1234
+
+u=input("Enter your name:")
+p=int(input("Enter your password:"))
+
+if(username==u and password==p):
+    while(True):
+        print('''Enter the option you want:
+        1.Display Amount
+        2.Withdraw
+        3.Deposite
+        4.Exit''')
+        n=int(input("Enter the option:"))
+        if n==1:
+            a.displayinfo()
+        elif n==2:
+            a.withdraw(b.withdraw())
+        elif n==3:
+            a.deposite(b.deposite())
+        elif n==4:
+            print("********Thanks for using ATM********")
+            exit()
+        else:
+            print("Invalid Number")
+else:
+    print("Invalid Information Check again")

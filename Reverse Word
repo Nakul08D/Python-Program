@@ -1,0 +1,32 @@
+a="It's very good to see you"
+s=a.split()
+re=[]
+for word in s:
+    re.insert(0,word)
+
+print(' '.join(re))
+
+
+# def reverse(s):
+#     a=s.split()
+#     j=' '.join(reversed(a))
+#     return j
+
+# s="It's very good to see you"
+# a=reverse(s)
+# print(a)
+
+#-----------------------------------------------------#
+
+# Reverse String Using Recurssion:
+
+# def reverse(s):
+#     if len(s)==0:
+#         return s
+#     else:
+#         return reverse(s[1:]) + s[0]
+
+# st=input("Enter string: ")
+# print("Before Reverse: ",st)
+# a=reverse(st)
+# print("After reverse: ",a)

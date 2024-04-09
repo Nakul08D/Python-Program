@@ -1,0 +1,19 @@
+class complex:
+    def __init__(self,r,i):
+        self.real=r
+        self.imaginary=i
+
+    def __add__(self,n):
+        return f"{self.real + n.real} and {self.imaginary + n.imaginary}"
+    
+    def __str__(self):
+        return f"{self.real} , {self.imaginary}"
+        
+    
+c1=complex(5,10)
+c2=complex(15,20)
+print(c1+c2)
+print(c1)
+print(c2)
+
+

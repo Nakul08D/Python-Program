@@ -1,0 +1,44 @@
+# # For Number:
+
+# def check(n):
+#     sum=0
+#     while(n>0):
+#         r=n%10
+#         sum=r+(sum*10)
+#         #sum=r*r*r+(sum)-> To check whether a number is Armstrong or not
+#         n=n//10
+#     return sum
+
+# num = int(input("Enter the number:"))
+# n=check(num)
+
+# if(num==n):
+#     print("The number is Palindrom")
+# else:
+#     print("Not a Palidrom")
+
+# For String:
+    
+def palindrom(a):
+    if len(a)==0:
+        return True
+    
+    string=''
+    for i in a:
+        if i.isalnum():
+            string+=i
+    string=string.lower()
+    print(string)
+
+    size=len(string)
+    l=0
+    r=size-1
+    
+    for i in range(size):
+        if (string[l]!=string[r]):
+            return False
+    return True
+
+#a="Naman"
+a="A man ,a plan ,a canal:Panama"
+print(palindrom(a))

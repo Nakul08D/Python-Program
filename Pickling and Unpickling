@@ -1,0 +1,15 @@
+import pickle
+
+# Picklie
+#car=['Audi','BMW','Hyundai','Ferrari']
+# file='My Cars'
+# fileobj=open(file,'wb')
+# pickle.dump(car,fileobj)
+# fileobj.close()
+
+# Unpickle
+file='My Cars'
+fileobj=open(file,'rb')
+car=pickle.load(fileobj)
+print(car)
+fileobj.close()

@@ -1,0 +1,12 @@
+def deco(fx):
+    def dec():
+        print("Hey,")
+        fx()
+        print("Boys")
+    return dec
+@deco
+def freet():
+    print("Good Morning")
+
+
+freet()
