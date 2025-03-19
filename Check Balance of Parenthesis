@@ -21,7 +21,6 @@ def check(a):
             s.append(i)
         elif i in close_list:
             pos = close_list.index(i)
-            print("-------",pos)
             if len(s)>0 and open_list[pos] == s[(len(s)-1)]:
                 s.pop()
             else:

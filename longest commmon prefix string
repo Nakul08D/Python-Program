@@ -9,8 +9,9 @@ def common(a):
     shortest=a[0]
 
     for i in range(len(shortest)):
-        if (a[size-1][i] == shortest[i]):
-            prefix+=a[size-1][i] 
+        if (a[size-1][i]!= shortest[i]):
+            return prefix
+        prefix+=a[size-1][i] 
 
     return  prefix
 

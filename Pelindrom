@@ -1,21 +1,21 @@
-# # For Number:
+# For Number:
 
-# def check(n):
-#     sum=0
-#     while(n>0):
-#         r=n%10
-#         sum=r+(sum*10)
-#         #sum=r*r*r+(sum)-> To check whether a number is Armstrong or not
-#         n=n//10
-#     return sum
+def check(n):
+    sum=0
+    while(n>0):
+        r=n%10
+        sum=r+(sum*10)
+        #sum=r*r*r+(sum)-> To check whether a number is Armstrong or not
+        n=n//10
+    return sum
 
-# num = int(input("Enter the number:"))
-# n=check(num)
+num = int(input("Enter the number:"))
+n=check(num)
 
-# if(num==n):
-#     print("The number is Palindrom")
-# else:
-#     print("Not a Palidrom")
+if(num==n):
+    print("The number is Palindrom")
+else:
+    print("Not a Palidrom")
 
 # For String:
     

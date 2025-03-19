@@ -13,3 +13,19 @@ def anagram(a):
 
 a=["cat","dog","god","tca","act"]
 print(anagram(a))
+
+# Group Anagram:
+
+def group_anagram(s):
+    d={}
+    for i in s:
+        w=''.join(sorted(i))
+        if w not in d:
+            d[w]=[i]
+        else:
+            d[w].append(i)
+    
+    return list(d.values())
+
+strs = ["eat","tea","tan","ate","nat","bat"]
+print(group_anagram(strs))
